@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     
     # render :text => "Welcome, #{current_user.name}."
     flash.now[:success] = "Welcome, #{current_user.name}."
-    redirect_to root_path
+    redirect_to about_path
   end
   
   def failure
