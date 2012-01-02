@@ -2,6 +2,8 @@ Gandhi::Application.routes.draw do
 
   match 'home' => 'pages#home'
   match 'about' => 'pages#about'
+  
+  match '/auth/:provider/callback', :to => 'sessions#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
