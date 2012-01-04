@@ -5,10 +5,10 @@
 		        <ul class="nav">
 		          <li><%= link_to "Home", root_path %></li>
 		          <li><a href="#about">About</a></li>
+		          <li><% current_user %> </li>
 		        </ul>
 		        <% if current_user %>
 		          	<ul class="nav secondary-nav">
-		          		<li>Logged in</li>
 		          		<li><%= link_to "SignOut", signout_path, :method => :delete %></li>
 		          	</ul>
 		        <% end %>
