@@ -9,9 +9,14 @@ class BillsController < ApplicationController
   def create
     @bill = current_user.bills.build(params[:bill])
     if @bill.save
-      redirect_to about_path
+      flash[:success] = "bill created!"
+      redirect_to root_path
     else 
       render new
     end
+  end
+  
+  def show
+    @bill = Bill.find(params[:id])
   end
 end
