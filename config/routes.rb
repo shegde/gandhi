@@ -1,5 +1,5 @@
 Gandhi::Application.routes.draw do
-
+  resources :bills
   match 'home' => 'pages#home'
   match 'about' => 'pages#about'
   

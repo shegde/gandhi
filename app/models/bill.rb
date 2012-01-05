@@ -4,5 +4,6 @@ class Bill < ActiveRecord::Base
   belongs_to :user
   
   validates :number, :presence => true
+  validates :location, :presence => true
   validates :user_id, :presence => true
 end

@@ -7,6 +7,7 @@ gem 'rails', '3.0.9'
 
 gem 'pg'
 gem 'omniauth', '0.2.6'
+gem 'simple_form', '1.5.1'
 
 # Use unicorn as the web server
 # gem 'unicorn'

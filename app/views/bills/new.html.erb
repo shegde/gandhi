@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="hero-unit">
+		<h1>Add a new bill</h1>
+	</div>		
+</div>
+
+<div class="container">
+	<% if !current_user %>
+	<%= render 'shared/error' %> <!-- please login before creating post message-->
+	<% end %>
+
+<% simple_form_for @bill do |f| %>
+	<%= render 'shared/error_messages' %>
+	<%= f.input :number %>
+	<%= f.input :location %>
+	<%= f.submit 'Create' %>
+
+<% end %>
+</div>
